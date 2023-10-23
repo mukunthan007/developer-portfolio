@@ -26,3 +26,15 @@ navLink.forEach((link) =>
         ul.classList.remove("show");
     })
 );
+
+window.onscroll = function () {
+    console.log('in');
+    var pageOffset = document.documentElement.scrollTop || document.body.scrollTop;
+    if (pageOffset >= 100) {
+        console.log("inside");
+        document.getElementById('scroll-up').style.visibility = "visible";
+    }
+    else {
+        document.getElementById('scroll-up').style.visibility = "hidden";
+    }
+};
